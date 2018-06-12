@@ -1,0 +1,71 @@
+<% set_meta_tags title: "Create Crime Note", description: "create new crime report in South Africa" %>
+<% breadcrumb :new %>
+
+<div class="container">
+  <h1 class="my-3">Report New Crime Happened</h1>
+
+  <%= render "shared/errors", obj: @note %>
+
+  <%= form_for @note do |f| %>
+
+  <div class="form-group">
+    <i class="fas fa-clipboard-list"></i>
+    <%= f.label :crime_category, "crime_category"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.select :crime_category, Note::CRIME_CATEGORIES, {}, {class:"form-control"} %>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="form-group" >
+        <%= f.label :occured_at_date_part, "Date"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+        <div class='input-group'>
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
+          </div>
+          <%= f.text_field :occured_at_date_part, class: 'form-control date-picker', required: true %>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="form-group" >
+        <%= f.label :occured_at_time_part, "Time"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+        <div class='input-group'>
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class='far fa-clock'></i></span>
+          </div>
+          <%= f.text_field :occured_at_time_part, class: 'form-control time-picker', required: true %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <i class='fas fa-location-arrow'></i>
+    <%= f.label :address_city_part, "place/address incl. City/Towm"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.text_field :address_city_part, class: 'form-control', required: true %>
+  </div>
+  <div class="form-group">
+    <i class="fas fa-globe"></i>
+    <%= f.label :address_country_part, "country"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.select :address_country_part, Note::COUNTRIES_NAMES, {}, {class:"form-control"} %>
+  </div>
+
+  <div class="form-group">
+    <i class='fas fa-sticky-note'></i>
+    <%= f.label :situation, "situation"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.text_area :situation, class: 'form-control', rows: 8, required: true %>
+  </div>
+
+    <div class="form-group">
+    <%= button_tag type: 'submit', class: "btn btn-lg btn-warning my-5" do %>
+    <i class="fas fa-plus"></i>&nbsp;&nbsp;Create
+    <% end %>
+    &nbsp;&nbsp;
+    <%= link_to :notes do %>
+    <button class="btn btn-outline-secondary btn-lg my-5"><i class="fas fa-times"></i></i>&nbsp;&nbsp;Cancel</button>
+    <% end %>
+  </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,12 @@
+//= require rails-ujs
+//= require turbolinks
+//= require tether
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+//= require underscore
+//= require gmaps/google
+//= require moment
+//= require bootstrap-datetimepicker
+//= require social-share-button
+//= require_tree .

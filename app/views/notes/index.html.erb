@@ -1,0 +1,31 @@
+<% set_meta_tags title: "", description: "crime reports happened in South Africa" %>
+<% breadcrumb :notes %>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-12">
+
+      <%= link_to :new_note, class: 'btn btn-danger btn-lg my-4' do %>
+      <i class="far fa-newspaper"></i>&nbsp;&nbsp;<strong>Create New Crime Note</strong>
+      <% end %>
+
+      <% if @notes.exists? %>
+
+      <% @notes.each do |note| %>
+      <%= render 'shared/note_index', note: note %>
+      <% end %>
+
+      <% else %>
+
+      <div class="alert alert-danger text-center" role="alert">
+        Oops! no data yet....<i class="far fa-frown"></i>
+      </div>
+
+      <% end %>
+
+    </div><!--col-4-->
+
+  </div><!--row-->
+
+</div>

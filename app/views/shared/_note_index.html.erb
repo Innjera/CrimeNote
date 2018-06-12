@@ -1,0 +1,43 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="mb-0">
+      <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;
+      <strong><%= note.crime_category %></strong>
+    </h2>
+    <hr>
+    <h2 class="mb-0">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>&nbsp;&nbsp;<strong><%= note.address_city_part %></strong></span>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span><small>in <%= note.address_country_part%></small></span>
+    </h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <small>(latitude: <%= note.latitude %>, longitude: <%= note.longitude %>)</small>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <h3>
+        <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;
+        <small>Date&nbsp;&nbsp;</small>
+        <strong><%= note.occured_at&.strftime('%v') %></strong>
+      </h3>
+      <h3>
+        <i class="far fa-clock"></i>&nbsp;&nbsp;
+        <small>Time&nbsp;&nbsp;</small>
+        <strong><%= note.occured_at&.strftime('%R') %></strong>
+      </h3>
+    <hr>
+    <p><%= note.situation.truncate(200) %></p>
+    <hr>
+    <div class="d-flex justify-content-between">
+      <div>
+        <i class="far fa-comment"></i>&nbsp;&nbsp;<%= note.advises.count  %>&nbsp;advises & comments&nbsp;
+      </div>
+      <div>
+      <%= link_to note, class: "btn btn-danger" do %>
+      View Detail
+      <% end %>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+<% if note.feeling == 0 %>
+<div class="emoji emoji--angry">
+  <div class="emoji__face">
+    <div class="emoji__eyebrows"></div>
+    <div class="emoji__eyes"></div>
+    <div class="emoji__mouth"></div>
+  </div>
+</div>
+<span>angry</span>
+<small>experience</small>
+<% elsif note.feeling == 1 %>
+<div class="emoji emoji--sad">
+  <div class="emoji__face">
+    <div class="emoji__eyebrows"></div>
+    <div class="emoji__eyes"></div>
+    <div class="emoji__mouth"></div>
+  </div>
+</div>
+<span>sad</span>
+<small>experience</small>
+<% elsif note.feeling == 2 %>
+<div class="emoji emoji--haha">
+  <div class="emoji__face">
+    <div class="emoji__eyes"></div>
+    <div class="emoji__mouth">
+      <div class="emoji__tongue"></div>
+    </div>
+  </div>
+</div>
+<span>funny</span>
+<small>experience</small>
+<% end %>
