@@ -5,7 +5,7 @@ module ApplicationHelper
       title: 'Top',
       reverse: true,
       charset: 'utf-8',
-      description: 'This is a App which we share crime story we experienced, heared in South Africa. So that we could be informed of the crime which have not been reported to the authority.',
+      description: 'This is App in which we share crime stories we experienced ans heared in South Africa. So that we could be informed of the crime which have not been reported to the authority.',
       keywords: 'South Africa, Africa, johannesburg, crime, robbery, theft, carjacking, fake police, murder, inocent citizen, sandton, Cape Town, durban',
       canonical: request.original_url,
       separator: '|',
