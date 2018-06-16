@@ -23,7 +23,7 @@ class Note < ApplicationRecord
 
   validates :crime_category, format: { with: /[\w\d ]/, allow_blank: true}, length: {minimum: 2, maximum: 100, allow_blank: true}
   validates :address_city_part, presence: true, length: {minimum: 2, maximum: 100, allow_blank: true}
-  validates :situation, presence: true, length: {minimum: 2, maximum: 1000, allow_blank: true}
+  validates :situation, presence: true, length: {minimum: 2, maximum: 2000, allow_blank: true}
 
   COUNTRIES_NAMES = [
     "South Africa",
