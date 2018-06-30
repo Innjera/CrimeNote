@@ -12,6 +12,6 @@ ActiveAdmin.register Note do
 #   permitted
 # end
 
-permit_params :latitude, :longitude, :policeofficer_name, :bribe, :address, :address_city_part, :address_country_part, :situation, :feeling, :currency
+permit_params :latitude, :longitude, :crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part
 
 end
