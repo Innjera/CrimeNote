@@ -53,7 +53,7 @@ class Note < ApplicationRecord
     "Assault",
     "Fake Police",
     "Rape", "Sexual Assault",
-    "Card Skimming",
+    "Card Fraud, Skimming, Theft",
     "Others"
   ]
 
