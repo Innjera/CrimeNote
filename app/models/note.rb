@@ -21,7 +21,6 @@ class Note < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
 
-  validates :crime_category, format: { with: /[\w\d ]/, allow_blank: true}, length: {minimum: 2, maximum: 100, allow_blank: true}
   validates :address_city_part, presence: true, length: {minimum: 2, maximum: 100, allow_blank: true}
   validates :situation, presence: true, length: {minimum: 2, maximum: 4000, allow_blank: true}
 
@@ -44,17 +43,17 @@ class Note < ApplicationRecord
   ]
 
   CRIME_CATEGORIES = [
-    "Murder",
-    "House Robbery", "Street Robbery", "Parking Robbery", "Robbery",
-    "Car Jacking",
-    "House burglary",
-    "Pickpocket in Restaurant", "Other Pickpocket",
-    "Car Theft", "Theft",
+    "殺人（Murder）",
+    "住宅侵入強盗（House Robbery）", "路上強盗（Street Robbery）", "駐車場での強盗（Parking Robbery）", "強盗（Robbery）",
+    "カージャック（Car Jacking）",
+    "住宅侵入（House burglary）",
+    "レストランでのスリ（Pickpocket in Restaurant）", "スリ（Other Pickpocket）",
+    "車両盗難（Car Theft）", "窃盗（Theft）",
     "Assault",
-    "Fake Police",
-    "Rape", "Sexual Assault",
-    "Card Fraud, Skimming, Theft",
-    "Others"
+    "ニセ警官（Fake Police）",
+    "レイプ（Rape）", "性的侮辱（Sexual Assault）",
+    "クレジットカード盗難、スキミング",
+    "その他"
   ]
 
   before_validation do
