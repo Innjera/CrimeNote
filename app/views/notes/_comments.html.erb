@@ -3,12 +3,12 @@
 <div class="row">
   <div class="col-12">
     <h3 class="mb-3">
-      <i class="fas fa-comments"></i>&nbsp;&nbsp;<small>comments & advises</small>
+      <i class="fas fa-comments"></i>&nbsp;&nbsp;<small>コメント & アドバイス</small>
     </h3>
 
     <% if @note.advises.count == 0 %>
     <div class="alert alert-danger mb-3" role="alert">
-      <strong>No advise/comment yet...Be the first adviser!</strong>
+      <strong>まだアドバイスは有りません。最初のアドバイザーになりましょう！</strong>
     </div>
 
     <% else %>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="alert alert-warning mb-1" role="alert">
-      <strong>Post your advise/comment</strong>
+      <strong>アドバイス、コメントを投稿する</strong>
     </div>
 
     <% end %>
@@ -47,7 +47,7 @@
 
     <div class="form-group">
       <%= button_tag type: 'submit', class: "btn btn-lg btn-warning my-2" do %>
-      Post
+      投稿する
       <% end %>
     </div>
 
