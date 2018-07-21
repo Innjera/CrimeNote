@@ -5,8 +5,8 @@ module ApplicationHelper
       title: 'Top',
       reverse: true,
       charset: 'utf-8',
-      description: 'This is App in which we share crime stories we experienced ans heared in South Africa. So that we could be informed of the crime which have not been reported to the authority.',
-      keywords: 'South Africa, Africa, johannesburg, crime, robbery, theft, carjacking, fake police, murder, inocent citizen, sandton, Cape Town, durban',
+      description: '海外に暮らす、渡航する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。',
+      keywords: '海外駐在、海外で暮らす、海外危険情報、海外犯罪、強盗、ひったくり、スキミング、盗難、スリ',
       canonical: request.original_url,
       separator: '|',
       og: {
@@ -20,12 +20,12 @@ module ApplicationHelper
         if @note
           @note.situation
         else
-          'This is a App which we share crime story we experienced, heared in South Africa. So that we could be informed of the crime which have not been reported to the authority.'
+          '海外に暮らす、渡航する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。'
         end,
         type: 'website',
         url: request.original_url,
         image: image_url('logo.JPG'),
-        locale: 'es_ES',
+        locale: 'ja_JP',
       },
       twitter: {
         card: 'summary',
