@@ -27,21 +27,21 @@ class Note < ApplicationRecord
   validates :situation, presence: true, length: {minimum: 2, maximum: 4000, allow_blank: true}
 
   COUNTRIES_NAMES = [
-    "South Africa",
-    "Algeria", "Angola",
-    "Benin", "Botswana", "Burkina Faso", "Burundi",
-    "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Democratic Republic of the Congo", "Republic of the Congo", "Cote d'Ivoire",
-    "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia",
-    "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau",
-    "Kenya",
-    "Lesotho", "Liberia", "Libya",
-    "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique",
-    "Namibia", "Niger","Nigeria",
-    "Rwanda",
-    "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "Swaziland",
-    "Tanzania", "Togo", "Tunisia",
-    "Uganda",
-    "Zambia", "Zimbabwe"
+    "South Africa（南アフリカ）",
+    "Algeria（アルジェリア）", "Angola（アンゴラ）",
+    "Benin（ベナン）", "Botswana（ボツワナ）", "Burkina Faso（ブルキナファソ）", "Burundi（ブルンジ）",
+    "Cabo Verde（カーボベルデ）", "Cameroon（カメルーン）", "Central African Republic（中央アフリカ）", "Chad（チャド）", "Comoros（コモロ）", "Democratic Republic of the Congo（コンゴ民主共和国）", "Republic of the Congo（コンゴ共和国）", "Cote d'Ivoire（コートジボワール）",
+    "Djibouti（ジブチ）", "Egypt（エジプト）", "Equatorial Guinea（赤道ギニア）", "Eritrea（エリトリア）", "Ethiopia（エチオピア）",
+    "Gabon（ガボン）", "Gambia（ガンビア）", "Ghana（ガーナ）", "Guinea（ギニア）", "Guinea-Bissau（ギニアビザウ）",
+    "Kenya（ケニア）",
+    "Lesotho（レソト）", "Liberia（リベリア）", "Libya（リビヤ）",
+    "Madagascar（マダガスカル）", "Malawi（マラウィ）", "Mali（マリ）", "Mauritania（モーリタニア）", "Mauritius（モーリシャス）", "Morocco（モロッコ）", "Mozambique（モザンビーク）",
+    "Namibia（ナミビア）", "Niger（ニジェール）","Nigeria（ナイジェリア）",
+    "Rwanda（ルワンダ）",
+    "Sao Tome and Principe（サントメプリンシペ）", "Senegal（セネガル）", "Seychelles（セイシェル）", "Sierra Leone（シエラレオネ）", "Somalia（ソマリア、ソマリランド）", "South Sudan（南スーダン）", "Sudan（スーダン）", "Swaziland（スワジランド）",
+    "Tanzania（タンザニア）", "Togo（トーゴ）", "Tunisia（チュニジア）",
+    "Uganda（ウガンダ）",
+    "Zambia（ザンビア）", "Zimbabwe（ジンバブエ）"
   ]
 
   CRIME_CATEGORIES = [
