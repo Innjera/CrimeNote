@@ -5,8 +5,8 @@ module ApplicationHelper
       title: 'Top',
       reverse: true,
       charset: 'utf-8',
-      description: '海外に暮らす、渡航する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。',
-      keywords: '海外駐在、海外で暮らす、海外危険情報、海外犯罪、強盗、ひったくり、スキミング、盗難、スリ',
+      description: 'アフリカで働く、暮らす、旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。',
+      keywords: '海外駐在、海外で暮らす、海外危険情報、海外犯罪、強盗、ひったくり、スキミング、盗難、スリ、アフリカ、危険',
       canonical: request.original_url,
       separator: '|',
       og: {
@@ -20,7 +20,7 @@ module ApplicationHelper
         if @note
           @note.situation
         else
-          '海外に暮らす、渡航する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。'
+          'アフリカで働く、暮らす、旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。'
         end,
         type: 'website',
         url: request.original_url,
