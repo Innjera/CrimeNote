@@ -1,0 +1,5 @@
+<p>
+  <strong>[<%= note.crime_category %>]</strong>
+  <%= note.situation.truncate(50) %>
+</p>
+<%= link_to "詳細を見る", note_path(note) %>
