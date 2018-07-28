@@ -13,6 +13,8 @@
 #  crime_category       :string           not null
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  embassy              :boolean          default(FALSE), not null
+#  source_url           :text
 #
 
 class Note < ApplicationRecord

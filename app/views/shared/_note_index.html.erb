@@ -1,5 +1,8 @@
 <div class="card mb-4">
   <div class="card-header">
+    <% if note.embassy %>
+    <span class="badge badge-pill badge-danger mb-2 py-1">大使館掲載情報</span>
+    <% end %>
     <h2 class="mb-0">
       <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;
       <strong><%= note.crime_category %></strong>

@@ -30,6 +30,6 @@ class NotesController < ApplicationController
   end
 
   private def note_params
-    params[:note].permit(:crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part)
+    params[:note].permit(:crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url)
   end
 end

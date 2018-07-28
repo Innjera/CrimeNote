@@ -17,6 +17,8 @@ dates = ["2018-03-20 20:00:00", "2018-04-25 19:30:00", "2018-05-01 19:30:00"]
     crime_category: "#{crime[idx % 3]}",
     address_city_part:  "#{addresses[idx % 3]}",
     situation: "#{situations[idx % 2]}",
-    occured_at: "#{dates[idx % 3]}"
+    occured_at: "#{dates[idx % 3]}",
+    embassy: true,
+    source_url: "http://www.crimenote.com/"
   )
 end

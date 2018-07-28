@@ -10,14 +10,14 @@
 
   <div class="form-group">
     <i class="fas fa-clipboard-list"></i>
-    <%= f.label :crime_category, "crime_category"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.label :crime_category, "犯罪の種類"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
     <%= f.select :crime_category, Note::CRIME_CATEGORIES, {}, {class:"form-control"} %>
   </div>
 
   <div class="row">
     <div class="col-12 col-md-6">
       <div class="form-group" >
-        <%= f.label :occured_at_date_part, "Date"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+        <%= f.label :occured_at_date_part, "日にち"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
         <div class='input-group'>
           <div class="input-group-prepend">
             <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
@@ -28,7 +28,7 @@
     </div>
     <div class="col-12 col-md-6">
       <div class="form-group" >
-        <%= f.label :occured_at_time_part, "Time"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+        <%= f.label :occured_at_time_part, "時間"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
         <div class='input-group'>
           <div class="input-group-prepend">
             <span class="input-group-text"><i class='far fa-clock'></i></span>
@@ -41,19 +41,31 @@
 
   <div class="form-group">
     <i class='fas fa-location-arrow'></i>
-    <%= f.label :address_city_part, "place/address incl. City/Towm"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.label :address_city_part, "場所（分かる限りの住所を記載してください）"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
     <%= f.text_field :address_city_part, class: 'form-control', required: true %>
   </div>
   <div class="form-group">
     <i class="fas fa-globe"></i>
-    <%= f.label :address_country_part, "country"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.label :address_country_part, "国"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
     <%= f.select :address_country_part, Note::COUNTRIES_NAMES, {}, {class:"form-control"} %>
   </div>
 
   <div class="form-group">
     <i class='fas fa-sticky-note'></i>
-    <%= f.label :situation, "situation"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
+    <%= f.label :situation, "状況"%>&nbsp;&nbsp;&nbsp;<small><span class="text-danger">* required</span></small>
     <%= f.text_area :situation, class: 'form-control', rows: 10, required: true %>
+  </div>
+
+  <div class="form-group">
+    <i class="fas fa-building"></i>
+    <%= f.label :embassy, "大使館HPに掲載されている情報ですか？ " %>
+    <%= f.check_box :embassy %>
+  </div>
+
+  <div class="form-group">
+    <i class="fas fa-external-link-alt"></i>
+    <%= f.label :source_url, "ニュース等外部ソースがある場合はURLを記載してください"%>
+    <%= f.text_field :source_url, class: 'form-control' %>
   </div>
 
     <div class="form-group">
