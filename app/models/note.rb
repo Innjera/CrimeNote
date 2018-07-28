@@ -51,10 +51,10 @@ class Note < ApplicationRecord
     "住宅侵入（House burglary）",
     "レストランでのスリ（Pickpocket in Restaurant）", "スリ（Other Pickpocket）",
     "車両盗難（Car Theft）", "窃盗（Theft）",
-    "Assault",
+    "暴行（Assault）",
     "ニセ警官（Fake Police）",
-    "レイプ（Rape）", "性的侮辱（Sexual Assault）",
     "クレジットカード盗難、スキミング",
+    "レイプ（Rape）", "性的暴行（Sexual Assault）",
     "その他"
   ]
 
