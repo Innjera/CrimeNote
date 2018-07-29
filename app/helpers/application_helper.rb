@@ -5,22 +5,22 @@ module ApplicationHelper
       title: 'Top',
       reverse: true,
       charset: 'utf-8',
-      description: 'アフリカで働く、暮らす、旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。',
-      keywords: '海外駐在、海外で暮らす、海外危険情報、海外犯罪、強盗、ひったくり、スキミング、盗難、スリ、アフリカ、危険',
+      description: 'アフリカで働く、アフリカで暮らす、アフリカに旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。',
+      keywords: '海外駐在、アフリカに住む、アフリカで暮らす、アフリカで遊ぶ、アフリカ危険情報、アフリカ犯罪、強盗、ひったくり、スキミング、盗難、スリ、アフリカ、危険',
       canonical: request.original_url,
       separator: '|',
       og: {
         site_name: 'CrimeNote',
         title:
         if @note
-          "Crime Note about #{@note.crime_category} happened at #{@note.address}"
+          "[Crime Note|#{@note.address_country_part}] #{@note.crime_category}が#{@note.address}で発生しました。"
         else 'CrimeNote'
         end,
         description:
         if @note
           @note.situation
         else
-          'アフリカで働く、暮らす、旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。'
+          'アフリカで働く、アフリカで暮らす、アフリカに旅する日本人の為の犯罪情報シェアサイトです。土地勘の無い方でもどこで、どんな犯罪が起きているか分かるよう、マップが表示されます。'
         end,
         type: 'website',
         url: request.original_url,
@@ -29,7 +29,7 @@ module ApplicationHelper
       },
       twitter: {
         card: 'summary',
-        site: '@NoMoreCopHarass',
+        site: '@NoteCrime',
       }
     }
   end
