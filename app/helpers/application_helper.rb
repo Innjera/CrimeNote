@@ -24,7 +24,7 @@ module ApplicationHelper
         end,
         type: 'website',
         url: request.original_url,
-        image: image_url('logo.JPG'),
+        image: image_url('new_logo.JPG'),
         locale: 'ja_JP',
       },
       twitter: {
