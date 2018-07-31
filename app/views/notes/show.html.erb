@@ -30,6 +30,10 @@
       <p class="mb-3">
         <%= simple_format(raw Rinku.auto_link(h(@note.situation))) %>
       </p>
+
+      <% if @note.source_url %>
+      <i class="far fa-newspaper"></i>&nbsp;<%= raw Rinku.auto_link(h(@note.source_url)) %>
+      <% end %>
     </div>
   </div>
 
