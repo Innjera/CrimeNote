@@ -1,6 +1,6 @@
 module HeaderHelper
   ACTION_LABEL_MAP = {
-    about: "About",
+    about: "Mission",
     index: "View All Notes",
     new: "Report New Crime"
   }
