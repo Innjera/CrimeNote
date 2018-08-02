@@ -1,6 +1,6 @@
 class TopController < ApplicationController
   def top
-    @notes = Note.order(updated_at: :desc).limit(4)
+    @notes = Note.order(updated_at: :desc).limit(10)
     @notes_all = Note.all
     @hash = Gmaps4rails.build_markers(@notes_all) do |note, marker|
       marker.lat note.latitude
