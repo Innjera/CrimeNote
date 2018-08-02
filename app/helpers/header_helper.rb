@@ -1,8 +1,8 @@
 module HeaderHelper
   ACTION_LABEL_MAP = {
-    about: "About",
-    index: "View All Notes",
-    new: "Report New Crime"
+    about: " ミッション ",
+    index: " 過去の治安・犯罪情報を全てみる ",
+    new: " 新しい治安・犯罪情報を作成する "
   }
 
   def header_nav_link(action)

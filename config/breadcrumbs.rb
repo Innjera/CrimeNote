@@ -3,18 +3,18 @@ crumb :root do
 end
 
 crumb :notes do
-  link "Crime Notes", notes_path
+  link "過去の治安・犯罪情報を全て見る", notes_path
 end
 
 crumb :note do |note|
-  link "#{note.crime_category} at #{note.address}", note
+  link "#{note.address}で発生した#{note.crime_category}", note
   parent :notes
 end
 
 crumb :about do
-  link "About", about_path
+  link "ミッション", about_path
 end
 
 crumb :new do
-  link "Create New Report", new_note_path
+  link "治安・犯罪情報を作成する", new_note_path
 end
