@@ -8,16 +8,26 @@
         <h1 class="text-white text-shadow">アフリカで暮らす、仕事する、アフリカを旅する日本人の為の治安情報シェアサイト</h1>
         <h2 class="text-white text-shadow">マップで位置を確認して、安全にお過ごしください！</h2>
       </div>
-      <div class="my-3 text-center">
+      <div class="my-4 text-center">
         <%= link_to :new_note do %>
         <button class="btn btn-danger btn-lg"><i class="far fa-newspaper"></i>&nbsp&nbsp<strong>治安・犯罪情報を作成する</strong></button>
         <% end %>
       </div>
+
     </div><!--col-12-->
+
+
   </div>
 
   <div class="row">
-    <div class="col-12 my-5">
+    <div class="col-12 mt-3 text-center">
+      <% @countries_count.each do |key, value| %>
+      <span class="badge badge badge-warning"><%= key %>
+        <span class="badge badge-pill badge-light"><%= value %>件</span>
+      </span>
+      <% end %>
+    </div>
+    <div class="col-12 my-3">
       <div style='width: 100%;' class="text-center">
         <div id="map" style='width: 100%; height: 60vh;'></div>
       </div>
