@@ -15,6 +15,7 @@
 #  updated_at           :datetime         not null
 #  embassy              :boolean          default(FALSE), not null
 #  source_url           :text
+#  general              :boolean          default(FALSE), not null
 #
 
 class Note < ApplicationRecord

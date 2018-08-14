@@ -15,18 +15,23 @@
       <% if @note.embassy %>
       <span class="badge badge-pill badge-danger mt-4 py-1">大使館掲載情報</span>
       <% end %>
+      <% if @note.general %>
+      <span class="badge badge-pill badge-secondary mb-2 py-1">一般治安・犯罪情報</span>
+      <% end %>
 
       <h2 class="mt-3 mb-0">
         <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;<strong><%= @note.crime_category %></strong>
         @&nbsp;&nbsp;<strong><%= @note.address_city_part %></strong></span>
         <span><small>in <%= @note.address_country_part%></small></span>
       </h2>
-        <h3 class="my-3">
+      <% unless @note.general %>
+      <h3 class="my-3">
         <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;<small>Date&nbsp;:&nbsp;</small><strong><%= @note.occured_at.strftime('%v') %></strong>
       </h3>
       <h3 class="my-3">
         <i class="far fa-clock"></i>&nbsp;&nbsp;<small>Time&nbsp;:&nbsp;</small><strong><%= @note.occured_at.strftime('%R') %></strong>
       </h3>
+      <% end %>
       <p class="mb-3">
         <%= simple_format(raw Rinku.auto_link(h(@note.situation))) %>
       </p>

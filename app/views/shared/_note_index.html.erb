@@ -3,6 +3,9 @@
     <% if note.embassy %>
     <span class="badge badge-pill badge-danger mb-2 py-1">大使館掲載情報</span>
     <% end %>
+    <% if note.general %>
+    <span class="badge badge-pill badge-secondary mb-2 py-1">一般治安・犯罪情報</span>
+    <% end %>
     <h2 class="mb-0">
       <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;
       <strong><%= note.crime_category %></strong>
@@ -20,6 +23,7 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">
+      <% unless note.general %>
       <h3>
         <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;
         <small>Date&nbsp;&nbsp;</small>
@@ -31,6 +35,7 @@
         <strong><%= note.occured_at&.strftime('%R') %></strong>
       </h3>
     <hr>
+    <% end %>
     <p><%= note.situation.truncate(200) %></p>
     <hr>
     <div class="d-flex justify-content-between">
