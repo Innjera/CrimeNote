@@ -19,6 +19,7 @@ class NotesController < ApplicationController
     time0 = Time.current.beginning_of_hour
     @note.occured_at = time0.advance(hours: -1)
     @note.embassy = false
+    @note.general = false
   end
 
   def create
