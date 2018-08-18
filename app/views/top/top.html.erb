@@ -25,7 +25,7 @@
       <% @countries_count.each do |key, value| %>
 
       <%= link_to country_notes_path(country: key, count: value) do %>
-      <span class="badge badge badge-warning my-1" style="font-size:1.5rem;"><%= key %>
+      <span class="badge badge badge-warning my-1" style="font-size:1.2rem;"><%= key %>
         <span class="badge badge-pill badge-light"><%= value %>件</span>
       </span>
       <% end %>
