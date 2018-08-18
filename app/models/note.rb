@@ -46,16 +46,18 @@ class Note < ApplicationRecord
   ]
 
   CRIME_CATEGORIES = [
-    "殺人（Murder）",
     "住宅侵入強盗（House Robbery）", "路上強盗（Street Robbery）", "駐車場での強盗（Parking Robbery）", "強盗（Robbery）",
+    "誘拐（Abduction）",
     "カージャック（Car Jacking）",
     "住宅侵入（House burglary）",
-    "レストランでのスリ（Pickpocket in Restaurant）", "スリ（Other Pickpocket）",
+    "レストランでの盗難（theft in Restaurant）", "スリ（Other Pickpocket）",
     "車上荒らし（Breaking ito car）", "車両盗難（Car Theft）", "窃盗（Theft）",
     "暴行（Assault）",
     "ニセ警官（Fake Police）",
     "クレジットカード盗難、スキミング",
+    "贈賄要求（bribe）",
     "レイプ（Rape）", "性的暴行（Sexual Assault）",
+    "殺人（Murder）",
     "その他"
   ]
 
