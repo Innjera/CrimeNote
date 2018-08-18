@@ -19,6 +19,7 @@ class NotesController < ApplicationController
     time0 = Time.current.beginning_of_hour
     @note.occured_at = time0.advance(hours: -1)
     @note.embassy = false
+    @note.general = false
   end
 
   def create
@@ -43,6 +44,6 @@ class NotesController < ApplicationController
   end
 
   private def note_params
-    params[:note].permit(:crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url)
+    params[:note].permit(:crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url, :general)
   end
 end
