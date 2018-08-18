@@ -79,4 +79,12 @@ class Note < ApplicationRecord
   def occured_at_time_part
     @occured_at_time_part ||= occured_at&.strftime('%H:%M')
   end
+
+  def self.country_find(country)
+    rel = order("updated_at")
+    if country.present?
+      rel = rel.where(address_country_part: country)
+    end
+    rel
+  end
 end

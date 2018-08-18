@@ -30,6 +30,18 @@ class NotesController < ApplicationController
     end
   end
 
+  def country
+    @notes = Note.country_find(params[:country])
+    @count = (params[:count])
+    @country = (params[:country])
+    @hash = Gmaps4rails.build_markers(@notes) do |address, marker|
+      marker.lat address.latitude
+      marker.lng address.longitude
+      marker.infowindow address.situation
+    end
+    render "index"
+  end
+
   private def note_params
     params[:note].permit(:crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url)
   end

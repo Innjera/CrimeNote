@@ -3,6 +3,7 @@
 <div class="container-fluid cover ">
 
   <div class="row">
+
     <div class="col-12 top_of_top">
       <div class="my-5 text-center">
         <h1 class="text-white text-shadow">アフリカで暮らす、仕事する、アフリカを旅する日本人の為の治安情報シェアサイト</h1>
@@ -16,17 +17,22 @@
 
     </div><!--col-12-->
 
-
   </div>
 
   <div class="row">
-    <div class="col-12 mt-3 text-center">
+    <div class="col-12 my-4 text-center">
+      <h2 class="text-white">訪問する国のタグをタップ !</h2>
       <% @countries_count.each do |key, value| %>
-      <span class="badge badge badge-warning my-1"><%= key %>
+
+      <%= link_to country_notes_path(country: key, count: value) do %>
+      <span class="badge badge badge-warning my-1" style="font-size:1.5rem;"><%= key %>
         <span class="badge badge-pill badge-light"><%= value %>件</span>
       </span>
       <% end %>
+
+      <% end %>
     </div>
+
     <div class="col-12 my-3">
       <div style='width: 100%;' class="text-center">
         <div id="map" style='width: 100%; height: 60vh;'></div>
