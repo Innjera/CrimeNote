@@ -12,6 +12,6 @@ ActiveAdmin.register Note do
 #   permitted
 # end
 
-permit_params :latitude, :longitude, :crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url:profile_sex, :profile_age, :profile_type, :profile_supplement
+permit_params :latitude, :longitude, :crime_category, :address_city_part, :address_country_part, :address, :situation, :occured_at, :occured_at_date_part, :occured_at_time_part, :embassy, :source_url, :profile_sex, :profile_age, :profile_type, :profile_supplement
 
 end
