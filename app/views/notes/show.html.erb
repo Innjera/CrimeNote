@@ -35,6 +35,10 @@
         <% unless @note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_sex) %>
         )
       </h3>
+      <p>
+        <%= @note.try(:profile_supplement) %>
+      </p>
+
       </div>
       <% end %>
 
