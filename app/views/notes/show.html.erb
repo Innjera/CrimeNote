@@ -24,6 +24,20 @@
         @&nbsp;&nbsp;<strong><%= @note.address_city_part %></strong></span>
         <span><small>in <%= @note.address_country_part%></small></span>
       </h2>
+
+      <% if @note.profile_age or @note.profile_sex or @note.profile_type or @note.profile_supplement %>
+      <div class="my-4">
+      <h3>
+        <i class="fas fa-user-circle"></i>&nbsp;被害者プロファイル&nbsp;
+        (
+        <%= @note.try(:profile_type) %>
+        <% unless @note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_age) %>
+        <% unless @note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_sex) %>
+        )
+      </h3>
+      </div>
+      <% end %>
+
       <% unless @note.general %>
       <h3 class="my-3">
         <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;<small>Date&nbsp;:&nbsp;</small><strong><%= @note.occured_at.strftime('%v') %></strong>

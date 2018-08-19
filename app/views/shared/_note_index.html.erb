@@ -36,6 +36,17 @@
       </h3>
     <hr>
     <% end %>
+
+    <% if note.profile_age or note.profile_sex or note.profile_type or note.profile_supplement %>
+    <h3>
+      <i class="fas fa-user-circle"></i>&nbsp;&nbsp;
+      <%= note.try(:profile_type) %>
+      <% unless note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_age) %>
+      <% unless note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_sex) %>
+    </h3>
+  <hr>
+  <% end %>
+  
     <p><%= note.situation.truncate(200) %></p>
     <hr>
     <div class="d-flex justify-content-between">

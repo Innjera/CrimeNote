@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180814134812) do
+ActiveRecord::Schema.define(version: 20180819143616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,10 @@ ActiveRecord::Schema.define(version: 20180814134812) do
     t.boolean "embassy", default: false, null: false
     t.text "source_url"
     t.boolean "general", default: false, null: false
+    t.string "profile_sex"
+    t.string "profile_age"
+    t.string "profile_type"
+    t.text "profile_supplement"
   end
 
 end

@@ -16,6 +16,10 @@
 #  embassy              :boolean          default(FALSE), not null
 #  source_url           :text
 #  general              :boolean          default(FALSE), not null
+#  profile_sex          :string
+#  profile_age          :string
+#  profile_type         :string
+#  profile_supplement   :text
 #
 
 class Note < ApplicationRecord
