@@ -20,6 +20,10 @@ class NotesController < ApplicationController
     @note.occured_at = time0.advance(hours: -1)
     @note.embassy = false
     @note.general = false
+    @note.profile_age = nil
+    @note.profile_sex = nil
+    @note.profile_type = nil
+    @note.profile_supplement = nil
   end
 
   def create
