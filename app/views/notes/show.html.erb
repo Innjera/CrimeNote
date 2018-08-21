@@ -20,45 +20,54 @@
           <% end %>
 
           <% if @note.embassy %>
-          <span class="badge badge-pill badge-danger my-1 py-1">大使館掲載情報</span>
+          <span class="badge badge-pill badge-danger my-2 py-1">大使館掲載情報</span>
           <% end %>
           <% if @note.general %>
-          <span class="badge badge-pill badge-secondary my-1 py-1">一般治安・犯罪情報</span>
+          <span class="badge badge-pill badge-secondary my-2 py-1">一般治安・犯罪情報</span>
           <% end %>
+
+          <% if @note.profile_age or @note.profile_sex or @note.profile_type or @note.profile_supplement %>
+          <hr>
+          <div>
+            <h3>
+              <i class="fas fa-user-circle"></i>&nbsp;被害者プロファイル&nbsp;
+              (
+              <%= @note.try(:profile_type) %>
+              <% unless @note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_age) %>
+              <% unless @note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_sex) %>
+              )
+            </h3>
+            <p>
+              <%= @note.try(:profile_supplement) %>
+            </p>
+          </div>
+          <% end %>
+
+          <hr>
+
+          <p class="my-4">
+            <%= simple_format(raw Rinku.auto_link(h(@note.situation))) %>
+          </p>
+
+          <% unless @note.source_url.empty? %>
+          <div>
+            <i class="far fa-newspaper"></i>&nbsp;<%= raw Rinku.auto_link(h(@note.source_url)) %>
+          </div>
+          <% end %>
+
+          <div class="mt-2">
+            <div class="font-italic text-secondary  my-2">share this report via Social
+            <%= social_share_button_tag("crime report @ #{@note.address}", desc: @note.address) %>
+          </div>
+
         </div>
       </div>
 
-      <% if @note.profile_age or @note.profile_sex or @note.profile_type or @note.profile_supplement %>
-      <div class="my-4">
-      <h3>
-        <i class="fas fa-user-circle"></i>&nbsp;被害者プロファイル&nbsp;
-        (
-        <%= @note.try(:profile_type) %>
-        <% unless @note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_age) %>
-        <% unless @note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= @note.try(:profile_sex) %>
-        )
-      </h3>
-      <p>
-        <%= @note.try(:profile_supplement) %>
-      </p>
-      <hr>
-      </div>
-      <% end %>
 
-      <p class="mb-3">
-        <%= simple_format(raw Rinku.auto_link(h(@note.situation))) %>
-      </p>
 
-      <% unless @note.source_url.empty? %>
-      <i class="far fa-newspaper"></i>&nbsp;<%= raw Rinku.auto_link(h(@note.source_url)) %>
-      <% end %>
     </div>
   </div>
 
-  <div class="mt-2">
-    <div class="font-italic text-secondary  my-2">share this report via Social
-    <%= social_share_button_tag("crime report @ #{@note.address}", desc: @note.address) %>
-  </div>
   </div>
 
 
