@@ -1,0 +1,138 @@
+<% @country = "South Africa - 南アフリカ" %>
+<% set_meta_tags title: @country %>
+<% breadcrumb :SouthAfrica_notes, @country %>
+
+<div class="container-fluid">
+  <div class="alert alert-primary my-3" role="alert">
+    <h1>
+      <strong><%= @country %></strong>
+    </h1>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <ul class="ul-modify">
+        <li><h2 class="mb-0 d-inline">VISA</h2>&nbsp;&nbsp;<small>日本国パスポート保持者前提</small></li>
+      </ul>
+
+        <table class="table mt-2 mb-0">
+          <thead>
+            <tr>
+              <th scope="col">種類</th>
+              <th scope="col">必要有無</th>
+              <th scope="col">備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>90日以内の観光・商用</td>
+              <td><i class="far fa-thumbs-up"></i>&nbsp;不要</td>
+              <td>就労、就学、ボランティア活動等は不可</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mb-3">
+          <%= link_to "https://www.jetro.go.jp/ext_images/_Reports/02/c9ef63ac599cfce9/201503_SAfrica_visabook.pdf" do%>
+          &nbsp;<i class="fas fa-external-link-alt"> &nbsp;外部リファレンス</i>
+          <% end %>
+        </div>
+
+
+        <ul class="ul-modify">
+
+        <li><h2 class="mb-0">疫病・予防接種</h2></li>
+
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th scope="col">種類</th>
+              <th scope="col">予防接種</th>
+              <th scope="col">備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>黄熱病</td>
+              <td>不要</td>
+              <td>但し</td>
+            </tr>
+            <tr>
+              <td>マラリア</td>
+              <td> - </td>
+              <td> 基本的に関係ない</td>
+            </tr>
+            <tr>
+              <td>A型肝炎</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>B型肝炎</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>狂犬病</td>
+              <td> </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>破傷風</td>
+              <td> </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>腸チフス</td>
+              <td> </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 col-12">
+
+      <ul class="ul-modify">
+        <li><h2 class="mb-0">治安・犯罪被害マップ</h2></li>
+      </ul>
+
+      <%= render "notes/country_shared/crime_map"%>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 my-3">
+
+      <ul class="ul-modify">
+        <li><h2 class="mb-0">治安・犯罪被害事例</h2></li>
+      </ul>
+
+      <% if @notes.exists? %>
+
+      <% @notes.each do |note| %>
+      <%= render 'shared/note_index', note: note %>
+      <% end %>
+
+      <% else %>
+
+      <div class="alert alert-danger text-center" role="alert">
+        Oops! no data yet....<i class="far fa-frown"></i>
+      </div>
+
+      <% end %>
+
+      <%= link_to :new_note, class: 'btn btn-danger btn-lg my-4' do %>
+      <i class="far fa-newspaper"></i>&nbsp;&nbsp;<strong>治安・犯罪情報を作成する</strong>
+      <% end %>
+
+    </div><!--col-4-->
+
+  </div><!--row-->
+
+</div>

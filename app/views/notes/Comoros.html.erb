@@ -1,0 +1,79 @@
+<% @country = "Comoros - コモロ" %>
+<% set_meta_tags title: @country %>
+<% breadcrumb :Comoros_notes, @country %>
+
+<div class="container-fluid">
+  <div class="alert alert-primary my-3" role="alert">
+    <h1>
+      <strong><%= @country %></strong>
+    </h1>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-lg-6 col-12">
+
+      <ul class="ul-modify">
+        <li><h2 class="mb-0 d-inline">VISA</h2>&nbsp;&nbsp;<small>日本国パスポート保持者前提</small></li>
+
+        <div class="alert alert-success my-5" role="alert">
+          準備中
+        </div>
+
+      </ul>
+
+      <ul class="ul-modify">
+
+        <li><h2 class="mb-0">疫病・予防接種</h2></li>
+
+        <div class="alert alert-success my-5" role="alert">
+          準備中
+        </div>
+
+      </ul>
+
+    </div>
+
+    <div class="col-lg-6 col-12">
+
+      <ul class="ul-modify">
+        <li><h2 class="mb-0">治安・犯罪被害マップ</h2></li>
+      </ul>
+
+      <%= render "notes/country_shared/crime_map"%>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 my-3">
+
+      <ul class="ul-modify">
+        <li><h2 class="mb-0">治安・犯罪被害事例</h2></li>
+      </ul>
+
+      <% if @notes.exists? %>
+
+      <% @notes.each do |note| %>
+      <%= render 'shared/note_index', note: note %>
+      <% end %>
+
+      <% else %>
+
+      <div class="alert alert-danger text-center" role="alert">
+        Oops! no data yet....<i class="far fa-frown"></i>
+      </div>
+
+      <% end %>
+
+      <%= link_to :new_note, class: 'btn btn-danger btn-lg my-4' do %>
+      <i class="far fa-newspaper"></i>&nbsp;&nbsp;<strong>治安・犯罪情報を作成する</strong>
+      <% end %>
+
+    </div><!--col-4-->
+
+  </div><!--row-->
+
+</div>
