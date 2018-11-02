@@ -1,4 +1,6 @@
-<div class="card mb-4">
+<div class=" col-md-6 col-lg-4 mb-5">
+
+  <div class="card">
   <div class="card-header">
     <% if note.embassy %>
     <span class="badge badge-pill badge-danger mb-2 py-1">大使館掲載情報</span>
@@ -46,7 +48,7 @@
     </h3>
   <hr>
   <% end %>
-  
+
     <p><%= note.situation.truncate(200) %></p>
     <hr>
     <div class="d-flex justify-content-between">
@@ -59,4 +61,5 @@
       <% end %>
     </li>
   </ul>
+</div>
 </div>

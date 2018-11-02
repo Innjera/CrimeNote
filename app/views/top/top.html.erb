@@ -14,10 +14,9 @@
         <button class="btn btn-danger btn-lg"><i class="far fa-newspaper"></i>&nbsp&nbsp<strong>治安・犯罪情報を作成する</strong></button>
         <% end %>
       </div>
-
     </div><!--col-12-->
 
-  </div>
+  </div><!--row at 5-->
 
   <div class="row">
     <div class="col-12 my-4 text-center">
@@ -34,9 +33,8 @@
       <% end %>
       <% end %>
       <% end %>
-      <!--一時的非表示-->
 
-<% if false %>
+      <% if false %>
 
       <% countries_for_link = {
         "Algeria" => "Algeria（アルジェリア）", "Angola" => "Angola",
@@ -67,8 +65,7 @@
         <% end %>
         <% end %>
 
-<% end %>
-
+      <% end %><!--一時的非表示-->
 
         <span class="badge badge-light mt-3" style="font-size:1.2rem;">
           南部アフリカ
@@ -384,8 +381,6 @@
 
         <br>
 
-
-
     </div>
 
     <div class="col-12 my-3">
@@ -402,10 +397,13 @@
       });
       </script>
     </div>
+  </div><!--row at 21-->
+</div><!--container-fluid-->
 
-    <div class="col-12">
+<div class="articles container my-5">
+  <div class="row">
 
-      <% if @notes.exists? %>
+    <% if @notes.exists? %>
 
       <% @notes.each do |note| %>
       <%= render 'shared/note_index', note: note %>
@@ -417,10 +415,8 @@
         Oops! no data yet....<i class="far fa-frown"></i>
       </div>
 
-      <% end %>
+    <% end %>
 
-    </div><!--col-4-->
+  </div><!--row at 404-->
 
-  </div><!--row-->
-
-</div>
+</div><!--container-->
