@@ -1,14 +1,55 @@
-<hr>
-<div class="container">
-  <footer class="text-center text-secondary my-5 bold">
-    &copy; <%= Date.today.year %> crimenote.com
-    <div class="col-12 mt-3 text-center text-secondary alert alert-light">
-      <%= link_to "give your opinion!", "https://twitter.com/NoteCrime", class:"alert-link" %>
-      &nbsp;|&nbsp;
-      follow us on twitter! &nbsp;
-      <%= link_to "https://twitter.com/NoteCrime" do %>
-      <i class="fab fa-twitter fa-x"></i>
-      <% end %>
+
+<footer class="page-footer font-small pt-4">
+
+  <div class="container pt-3 text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mt-md-0 mt-3">
+        <h5 class="text-uppercase">Newsletter</h5>
+        <div class="input-group mb-3">
+          <input type="mail" class="form-control" placeholder="Sorry, coming soon!">
+          <div class="input-group-append">
+            <button class="btn btn-danger">subscribe</button>
+          </div>
+        </div>
+          <div class="socials mt-4">
+            <%= link_to "give your opinion!", "https://twitter.com/NoteCrime", class:"alert-link" %>
+            &nbsp;&nbsp;
+            <%= link_to image_tag('twitter.png', { border:'0', alt:'twitter', size: "40x40"}), "https://twitter.com/NoteCrime" %>
+          </div>
+
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <div class="col-md-6 mb-md-0 mb-3 offset-md-2">
+        <h5 class="text-uppercase">Site map</h5>
+
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <%= link_to "ミッション", about_path %>
+          </li>
+          <li class="mb-2">
+            <%= link_to "過去の治安・犯罪情報を全てみる", notes_path %>
+          </li>
+          <li class="mb-2">
+            <%= link_to "新しい治安・犯罪情報を作成する", new_note_path %>
+          </li>
+        </ul>
+
+      </div>
     </div>
-  </footer>
-</div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+    &copy; <%= Date.today.year %> CrimeNote.com
+    &nbsp;|
+    follow us on
+    <%= link_to "https://twitter.com/NoteCrime" do %>
+    <i class="fab fa-twitter fa-x"></i>
+    <% end %>
+  </div>
+
+
+
+  <!-- Copyright -->
+
+</footer>
