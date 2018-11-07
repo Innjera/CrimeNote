@@ -1,6 +1,6 @@
 class TopController < ApplicationController
   def top
-    @notes = Note.order(updated_at: :desc).limit(10)
+    @notes = Note.order(updated_at: :desc).limit(12)
     @countries_count = Note.group(:address_country_part).order(:address_country_part).count
     @notes_all = Note.all
     @hash = Gmaps4rails.build_markers(@notes_all) do |note, marker|
