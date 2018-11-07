@@ -59,8 +59,10 @@
           <i class="fas fa-user-circle girl"></i>&nbsp;&nbsp;
           <% elsif note.profile_sex == "女性" %>
           <i class="fas fa-user-circle boy"></i>&nbsp;&nbsp;
-          <% else note.profile_sex == "複数人" %>
+          <% elsif note.profile_sex == "複数人" %>
           <i class="fas fa-users"></i>&nbsp;&nbsp;
+          <% else %>
+          ----
           <% end %>
 
         <%= note.try(:profile_type) %>
