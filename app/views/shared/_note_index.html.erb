@@ -50,30 +50,35 @@
       </p>
       <% end %>
     </div>
+
     <ul class="list-group list-group-flush">
-    <li class="list-group-item">
+      <li class="list-group-item">
+        <% if note.profile_age or note.profile_sex or note.profile_type or note.profile_supplement %>
 
-    <% if note.profile_age or note.profile_sex or note.profile_type or note.profile_supplement %>
-    <h3>
-      <i class="fas fa-user-circle"></i>&nbsp;&nbsp;
-      <%= note.try(:profile_type) %>
-      <% unless note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_age) %>
-      <% unless note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_sex) %>
-    </h3>
-  <hr>
-  <% end %>
+          <% if note.profile_sex == "男性" %>
+          <i class="fas fa-user-circle girl"></i>&nbsp;&nbsp;
+          <% elsif note.profile_sex == "女性" %>
+          <i class="fas fa-user-circle boy"></i>&nbsp;&nbsp;
+          <% else note.profile_sex == "複数人" %>
+          <i class="fas fa-users"></i>&nbsp;&nbsp;
+          <% end %>
 
-    <p><%= note.situation.truncate(200) %></p>
-    <hr>
-    <div class="d-flex justify-content-between">
-      <div>
+        <%= note.try(:profile_type) %>
+        <% unless note.profile_age.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_age) %>
+        <% unless note.profile_sex.empty? %>&nbsp;&nbsp;<% end %><%= note.try(:profile_sex) %>
+        <% end %>
+      </li>
+    </ul>
+    <div class="card-body">
+      <p><%= note.situation.truncate(200) %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between">
         <i class="far fa-comment"></i>&nbsp;&nbsp;<%= note.advises.count  %>&nbsp;advises & comments&nbsp;
-      </div>
-      <div>
-      <%= link_to note, class: "btn btn-danger" do %>
-      詳細を見る
-      <% end %>
-    </li>
-  </ul>
-</div>
+        <%= link_to note, class: "btn btn-danger" do %>
+        詳細を見る
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>
