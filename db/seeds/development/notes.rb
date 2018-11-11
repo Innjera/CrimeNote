@@ -8,17 +8,11 @@ addresses = [
   "Park Station, Rissik St, CBD, Johannesburg",
   "Nairobi Railway Station, Nairobi",
   "KN 3 Avenue, Kigali",
-  "01 rue 20 bkp, Lomé",
-  "Rev Michael Scott Street, Windhoek",
-  "Route de l'Aeroport, Dakar"
 ]
 countries = [
-  "South Africa（南アフリカ）",
-  "Kenya（ケニア）",
-  "Rwanda（ルワンダ）",
-  "Togo（トーゴ）",
-  "Namibia（ナミビア）",
-  "Senegal（セネガル）"
+  "South Africa",
+  "Kenya",
+  "Rwanda",
 ]
 
 profile_age = [
@@ -63,7 +57,7 @@ general = [
 
 dates = ["2018-03-20 20:00:00", "2018-04-25 19:30:00", "2018-05-01 19:30:00"]
 
-0.upto(5) do |idx|
+0.upto(2) do |idx|
   Note.create(
     crime_category: "#{crime[idx % 3]}",
     address_city_part:  "#{addresses[idx % 6]}",
