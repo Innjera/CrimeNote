@@ -37,10 +37,9 @@
       <h5 class="card-title">
         <strong><%= note.crime_category %></strong>
       </h5>
-      <% unless note.general %>
       <p class="card-text">
         <i class="fas fa-map-marker-alt text-danger"></i>
-        <%= note.address_city_part %>, <%= note.address_country_part%>
+        <%= note.try(:address_city_part) %>, <%= note.try(:address_country_part) %>
         <br>
         <i class="fas fa-calendar-alt text-muted"></i>
         <%= note.occured_at&.strftime('%v')%>
@@ -48,7 +47,6 @@
         <i class="far fa-clock"></i>
         <%= note.occured_at&.strftime('%R') %>
       </p>
-      <% end %>
     </div>
 
     <ul class="list-group list-group-flush">
