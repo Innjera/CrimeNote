@@ -22,51 +22,6 @@
     <div class="col-12 my-4 text-center">
       <h2 class="text-white">訪問する国のタグをタップ !</h2>
 
-      <!--一時的非表示-->
-      <% if false %>
-      <% @countries_count.each do |key, value| %>
-
-      <%= link_to country_notes_path(country: key, count: value) do %>
-      <span class="badge badge badge-warning my-1" style="font-size:1.2rem;"><%= key %>
-        <span class="badge badge-pill badge-light"><%= value %>件</span>
-      </span>
-      <% end %>
-      <% end %>
-      <% end %>
-
-      <% if false %>
-
-      <% countries_for_link = {
-        "Algeria" => "Algeria（アルジェリア）", "Angola" => "Angola",
-        "Benin" => "Benin", "Botswana" => "Botswana", "BurkinaFaso" => "BurkinaFaso", "Burundi" => "Burundi",
-        "CaboVerde" => "Cabo Verde", "Cameroon" => "Cameroon", "CentralAfricanRepublic" => "Central African Republic", "Chad" => "Chad", "Comoros" => "Comoros",
-        "DemocraticRepublicOfTheCongo" => "Democratic Republic Of The Congo", "RepublicOfTheCongo" => "Republic of The Congo", "CoteDIvoire" => "Cote d'Ivoire",
-        "Djibouti" => "Djibouti",
-        "Egypt" => "Egypt", "EquatorialGuinea" => "Equatorial Guinea", "Eritrea" => "Eritrea", "eSwatini" => "eSwatini", "Ethiopia" => "Ethiopia",
-        "Gabon" => "Gabon", "Gambia" => "Gambia", "Ghana" => "Ghana", "Guinea" => "Guinea", "GuineaBissau" => "Guinea Bissau",
-        "Kenya" => "Kenya",
-        "Lesotho" => "Lesotho", "Liberia" => "Liberia", "Libya" => "Libya",
-        "Madagascar" => "Madagascar", "Malawi" => "Malawi", "Mali" => "Mali", "Mauritania" => "Mauritania", "Mauritius" => "Mauritius", "Morocco" => "Morocco", "Mozambique" => "Mozambique",
-        "Namibia" => "Namibia", "Niger" => "Niger", "Nigeria" => "Nigeria",
-        "Rwanda" => "Rwanda",
-        "SaoTomeAndPrincipe" => "Sao Tome and Principe", "Senegal" => "Senegal", "Seychelles" => "Seychelles", "SierraLeone" => "Sierra Leone", "Somalia" => "Somalia",
-        "Somaliland" => "Somaliland", "SouthAfrica" => "South Africa", "SouthSudan" => "South Sudan", "Sudan" => "Sudan",
-        "Tanzania" => "Tanzania", "Togo" => "Togo", "Tunisia" => "Tunisia",
-        "Uganda" => "Uganda",
-        "Zambia" => "Zambia", "Zimbabwe" => "Zimbabwe"
-      }
-        %>
-
-        <% countries_for_link.each do |key, value| %>
-        <%= link_to "/notes/#{key}" do %>
-        <span class="badge badge badge-warning my-1" style="font-size:1.2rem;">
-          <%= value %>
-        </span>
-        <% end %>
-        <% end %>
-
-      <% end %><!--一時的非表示-->
-
         <span class="badge badge-light mt-3" style="font-size:1.2rem;">
           南部アフリカ
         </span>
